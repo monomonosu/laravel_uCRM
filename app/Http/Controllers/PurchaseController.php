@@ -33,7 +33,6 @@ class PurchaseController extends Controller
         $items = Item::select('id', 'name', 'price')->where('is_selling', true)->get();
 
         return Inertia::render('Purchases/Create', [
-            'customers' => $customers,
             'items' => $items
         ]);
     }
